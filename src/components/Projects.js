@@ -11,6 +11,9 @@ import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
+import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
+
 
 
 export const Projects = () => {
@@ -28,17 +31,17 @@ export const Projects = () => {
     {
       title: "Sophie Bluel",
       description: "Développement et Intégration en Javascript",
-    //   imgURL: projImg3,
+      // imgURL: projImg3,
     },
     {
       title: "Kasa",
       description: "Implémentation front-end avec React",
-    //   imgURL: projImg4,
+      imgURL: projImg4,
     },
     {
       title: "Argent Bank",
       description: "Développement front-end avec React et Redux",
-    //   imgUrl: projImg5,
+      imgURL: projImg5,
     },
   ];
 
