@@ -9,18 +9,21 @@ import {
 } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg1 from "../assets/img/project-img1.png";
+import projImg2 from "../assets/img/project-img2.png";
+
 
 export const Projects = () => {
   const projects = [
     {
       title: "Booki",
       description: "intégration du site en HTML et CSS",
-    //   imgURL: projImg1,
+      imgURL: projImg1,
     },
     {
       title: "OhMyFood",
       description: "Développement et Intégration en mobile first",
-    //   imgURL: projImg2,
+      imgURL: projImg2,
     },
     {
       title: "Sophie Bluel",
@@ -50,7 +53,7 @@ export const Projects = () => {
               <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="first">Projets</Nav.Link>
+                  <Nav.Link eventKey="first">Mes Projets</Nav.Link>
                 </Nav.Item>
                 {/* <Nav.Item>
                   <Nav.Link eventKey="second">Tab Two</Nav.Link>
