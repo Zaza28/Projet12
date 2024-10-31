@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/img/logo.svg";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+// import navIcon3 from "../assets/img/nav-icon3.svg";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+library.add(faGithub);
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -69,15 +72,15 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/za%C3%AFneb-h-414b02273/">
                 <img src={navIcon1} alt="lien linkedin" />
               </a>
-              <a href="#">
-                <img src={navIcon2} alt="lien facebook" />
+              <a href="https://github.com/Zaza28">
+              <FontAwesomeIcon icon={faGithub} style={{color: "#fafafa",}} />
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <img src={navIcon3} alt="lien instagram" />
-              </a>
+              </a> */}
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
               <span>Let's Connect</span>
