@@ -567,13 +567,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /*****FOOTER ******/
 .footer {
   display: flex;
-  padding: 50px 0 30px 0px;
+  padding: 50px 0 30px 15px;
   background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   gap: 0;
-  justify-content: end;
+  text-align: end;
+  flex-wrap: wrap;
 }
 
 .logo-footer {
@@ -586,16 +587,21 @@ padding-bottom: 30px;
 display: flex;
 justify-content: end;
 flex-direction: row;
+flex-wrap: wrap;
 text-align: end;
-flex-wrap: nowrap;
-gap: none;
 }
+.icon-footer{
+  width: 100%;
+  height: 78px;
+}
+
 
 .footer-info p {
   padding-top: 10px;
   flex-wrap: nowrap;
   flex-direction: row;
   font-size: 25px;
+  white-space: nowrap;
 }
 
 /*******GLOBAL CSS *****/
@@ -638,64 +644,115 @@ gap: none;
     transform: rotate(360deg);
   }
 }
-/***** RESPONSIVE ******/
-/* Mobile - Portrait */
-@media (max-width: 767px) {
-  /* Navigation */
+/************RESPONSIVE******************/
+
+/**********MOBILE************/
+@media (min-width: 320px) and (max-width: 768px) {
+
+/********NAVBAR****************/
+
   nav.navbar {
     padding: 12px 0;
   }
 
   .logo-navbar {
-    width: 70%;
+    display: flex;
+    width: 250%;
     margin-left: 20px;
   }
 
   nav.navbar .navbar-nav .nav-link.navbar-link {
     font-size: 16px;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
+  .navbar-text {
+  justify-content:space-evenly;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  
+  }
+  .navbar-text button{
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.social-icon a {
+  width: 42px;
+  height: 38px;
+}
+/***********BANNER****************/
   .banner {
     padding: 150px 0 60px 0;
     text-align: center;
   }
-
+  .banner .tagline {
+    font-size: 15px;
+  }
   .banner h1 {
-    font-size: 36px;
+    font-size: 25px;
   }
 
   .banner p {
-    font-size: 14px;
+    font-size: 13px;
+    padding-left: 5px;
+    text-align:center;
+    color: #dadada;
+}
+.banner img {
+  width: 90%;
+}
+  .banner button{
+    font-size: 15px;
+    padding-bottom: 20px;
+    padding-left: 10px;
   }
-
-  /* Skills */
+/***********SKILLS***********/
   .skill h2 {
     font-size: 36px;
   }
-
+.description-skill{
+  font-size: 15px;
+  white-space: nowrap;
+}
   .skill p {
     font-size: 25px;
   }
 
-  /* Projects */
-  .project h2 {
-    font-size: 36px;
-  }
+/*********PROJECTS**************/
 
   .project p {
-    font-size: 16px;
+    font-size: 13px;
+    white-space: nowrap;
+    margin-left: 0;
+ padding-left: 6px;
+  }
+  .project h2 {
+    font-size: 25px;
   }
 
+.project .nav.nav-pills .nav-link{
+  padding: 4.5px;
+}
   .proj-imgbx {
-    height: 250px;
+    height: 200px;
+  }
+  .proj-imgbx img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
   }
 
-  /* Contact Form */
+/********CONTACT FORM**********/
   .contact form {
-    padding: 30px;
+    width: 90%;
+    padding: 20px;
   }
-
+  .contact h2{
+    font-size: 25px;
+  }
   .contact form input,
   .contact form textarea {
     padding: 10px;
@@ -705,12 +762,50 @@ gap: none;
     font-size: 16px;
     padding: 10px 20px;
   }
+
+  /*******FOOTER*********/
+  .footer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    white-space: wrap;
+    width: 100%;
+    padding: 30px 15px;
+
+  }
+    
+    .footer-info {
+      padding-bottom: 50px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      white-space: wrap;
+      flex-wrap: wrap;
+    }
+
+    .footer-info p {
+      font-size: 15px;
+    }
+    .logo-footer {
+    padding-bottom: 0px;
+    height: 20px;
+    justify-content: center;
+    }
+    .icon-footer{
+      width: 50%;
+      height: 28px;
+      padding-bottom: 35px;
+    }
 }
 
-/***** TABLET - Landscape **************/
+/************TABLET**************/
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Navigation */
+  /************NAVBAR************/
   nav.navbar {
     padding: 16px 0;
   }
@@ -739,7 +834,8 @@ gap: none;
 
 .social-icon a {
   width: 42px;
-  height: 38px;}
+  height: 38px;
+}
 
 /**** BANNER *********/
   .banner {
@@ -780,12 +876,15 @@ gap: none;
 
 /********* PROJECTS**************/
   .project h2 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .project p {
     font-size: 18px;
   }
+.project .nav.nav-pills .nav-link{
+  padding: 5px;
+}
 
 /********CONTACT FORM **********/
   .contact form {
@@ -806,46 +905,61 @@ gap: none;
 .footer{
 display: flex;
 width: 100%;
+padding-right: 20px;
+justify-content: space-evenly;
 }
 
 .footer-info {
   display: flex;
-  justify-content: space-around;
   flex-direction: row;
   text-align: end;
-  flex-wrap: nowrap;
+  white-space: nowrap;
+ padding-top: 30px;
   }
+
+.footer-info p {
+  font-size: 15px;
+}
+
+.logo-footer {
+padding-top: 40px;
+height: 90px;
+}
+.icon-footer{
+  width: 50%;
+  height: 28px;
+}
 
 /* Desktop - Large Screens */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   /* Banner */
-  .banner {
+  /* .banner {
     padding: 260px 0 100px 0;
-  }
+  } */
 
-  .banner h1 {
+  /* .banner h1 {
     font-size: 65px;
-  }
-
+  } */
+/* 
   .banner p {
     font-size: 17.5px;
-  }
+  } */
 
   /* Skills */
-  .skill h2 {
-    font-size: 45px;
-  }
+  /* .skill h2 {
+    /* font-size: 45px;
+  } */
 
-  .skill p {
+  /* .skill p {
     font-size: 50px;
-  }
+  } */ 
 
   /* Projects */
-  .project h2 {
+  /* .project h2 {
     font-size: 45px;
   }
 
   .project p {
     font-size: 20px;
   }
-}
+}  */

@@ -15,7 +15,7 @@ export const Footer = () => {
             <img src={logo} alt="logo"></img>
           </Col>
           <Col sm={6} className="text-center text-sm-end footer-info">
-            <div className="social-icon">
+            <div className="icon-footer social-icon ">
               <a
                 href="https://www.linkedin.com/in/za%C3%AFneb-h-414b02273/"
                 target="new"
