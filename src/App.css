@@ -695,9 +695,9 @@ text-align: end;
   }
 
   .banner p {
-    font-size: 13px;
+    font-size: 15px;
     padding-left: 5px;
-    text-align:center;
+    text-align:justify;
     color: #dadada;
 }
 .banner img {
@@ -740,10 +740,34 @@ text-align: end;
   }
   .proj-imgbx img {
     width: 100%;
-    height: auto;
     object-fit: cover;
     object-position: top;
   }
+  .proj-txtx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    text-align: center;
+    align-items: center;  
+    gap: 0px;
+    padding-top: 15px;
+  }
+  .proj-txtx h4 {
+    font-size: 20px;
+    padding: 0;
+  }
+  .proj-txtx span {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .proj-txtx a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    }
+
 
 /********CONTACT FORM**********/
   .contact form {
@@ -798,6 +822,7 @@ text-align: end;
     .icon-footer{
       width: 50%;
       height: 28px;
+      padding-top: 15px;
       padding-bottom: 35px;
     }
 }
@@ -811,7 +836,7 @@ text-align: end;
   }
 
   .logo-navbar {
-    width: 100%;
+    width: 120%;
     margin-left: 30px;
   }
 
@@ -843,11 +868,13 @@ text-align: end;
   }
 
   .banner h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   .banner p {
     font-size: 16px;
+    text-align:justify;
+    padding-right: 20px;
   }
   .img-banner-container{
     display: flex;
@@ -880,15 +907,45 @@ text-align: end;
   }
 
   .project p {
+    display: flex;
     font-size: 18px;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
   }
 .project .nav.nav-pills .nav-link{
-  padding: 5px;
+  padding: 8px;
 }
 
+.proj-txtx{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  text-align: center;
+  align-items: center;  
+  gap: 0px;
+  padding-top: 20px;
+}
+.proj-txtx h4 {
+  font-size: 20px;
+  padding-top: 20px;
+}
+.proj-txtx span {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+}
+
+.proj-txtx a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 35px;
+  }
 /********CONTACT FORM **********/
   .contact form {
-    padding: 35px;
+    width: 100%;
+    padding: 30px;
   }
 
   .contact form input,
@@ -914,16 +971,16 @@ justify-content: space-evenly;
   flex-direction: row;
   text-align: end;
   white-space: nowrap;
- padding-top: 30px;
-  }
+  padding-bottom: 0px;
+}
 
 .footer-info p {
   font-size: 15px;
 }
 
 .logo-footer {
-padding-top: 40px;
-height: 90px;
+padding-top: 20px;
+height: 70px;
 }
 .icon-footer{
   width: 50%;
