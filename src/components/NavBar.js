@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/ZAÏNEB-logo.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-// import navIcon3 from "../assets/img/nav-icon3.svg";
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 library.add(faGithub);
 
 export const NavBar = () => {
@@ -31,10 +30,11 @@ export const NavBar = () => {
   };
 
   return (
+    <>
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="logo-navbar" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@ export const NavBar = () => {
               Skills
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="#project"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
@@ -72,22 +72,20 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/za%C3%AFneb-h-414b02273/">
+              <a href="https://www.linkedin.com/in/za%C3%AFneb-h-414b02273/" target="new">
                 <img src={navIcon1} alt="lien linkedin" />
               </a>
-              <a href="https://github.com/Zaza28">
-              <FontAwesomeIcon icon={faGithub} style={{color: "#fafafa",}} />
+              <a href="https://github.com/Zaza28" target="new">
+                <FontAwesomeIcon icon={faGithub} style={{ color: "#fafafa" }} />
               </a>
-              {/* <a href="#">
-                <img src={navIcon3} alt="lien instagram" />
-              </a> */}
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
-              <span>Let's Connect</span>
+            <button className="nav-button" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+            <span>Let's Connect</span>
             </button>
           </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+</>
   );
 };

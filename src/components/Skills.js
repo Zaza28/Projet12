@@ -2,9 +2,12 @@ import { Container, Col, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import htmlLogo from "../assets/img/html-logo.svg";
+import cssLogo from "../assets/img/css-logo.svg";
+import sassLogo from "../assets/img/sass-svgrepo-com.svg";
+import jsLogo from "../assets/img/javascript-logo.svg";
+import reactLogo from "../assets/img/react-svgrepo-com.svg";
+import figmaLogo from "../assets/img/figma-logo.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -32,35 +35,59 @@ export const Skills = () => {
         <Row>
           <Col>
             <div className="skill-bx">
-                <h2>
-                    Skills 
-                </h2>
-                <p>description</p>
-                <Carousel responsive={responsive} infinite={true} className="skills-slider"> 
+              <h2>Skills</h2>
+              <p className="description-skill">Mes compétences techniques.</p>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                className="skills-slider"
+              >
                 <div className="item">
-                    <img src={meter1} alt="meter1" />
-                    <h5>HTML</h5>
-                </div>  
-                <div className="item">
-                    <img src={meter1} alt="meter1" />
-                    <h5>CSS</h5>
+                  <img src={htmlLogo} alt="html-logo" className="skills-logo" />
+                  <h5>HTML</h5>
                 </div>
                 <div className="item">
-                    <img src={meter3} alt="meter3" />
-                    <h5>Javascript</h5>
-                </div>  
+                  <img src={cssLogo} alt="css-logo" className="skills-logo" />
+                  <h5>CSS</h5>
+                </div>
                 <div className="item">
-                    <img src={meter2} alt="meter2" />
-                    <h5>React</h5>
-                </div>   
-            
-             
-                </Carousel>
+                  <img src={sassLogo} alt="sass-logo" className="skills-logo" />
+                  <h5>SASS</h5>
+                </div>
+                <div className="item">
+                  <img
+                    src={jsLogo}
+                    alt="javascript-logo"
+                    className="skills-logo"
+                  />
+                  <h5>Javascript</h5>
+                </div>
+                <div className="item">
+                  <img
+                    src={reactLogo}
+                    alt="react-logo"
+                    className="skills-logo"
+                  />
+                  <h5>React</h5>
+                </div>
+                <div className="item">
+                  <img
+                    src={figmaLogo}
+                    alt="figma-logo"
+                    className="skills-logo"
+                  />
+                  <h5>Figma</h5>
+                </div>
+              </Carousel>
             </div>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-left" src={colorSharp} alt="background-image" />
+      <img
+        className="background-image-left"
+        src={colorSharp}
+        alt="background-image"
+      />
     </section>
   );
 };
