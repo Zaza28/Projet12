@@ -56,7 +56,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="project" loading="lazy">
       <Container>
         <Row>
           <Col>
