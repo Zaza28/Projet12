@@ -21,6 +21,7 @@ export const Projects = () => {
       title: "Booki",
       description: "Création de la page d'accueil de l'agence de voyage Booki",
       imgURL: projImg1,
+      link: "https://zaza28.github.io/booki/",
     },
     {
       title: "OhMyFood",
@@ -30,7 +31,7 @@ export const Projects = () => {
     },
     {
       title: "Nina Carducci",
-      description: "Optimisation du référencement du site de la photographe Nina Carducci",
+      description: "Optimisation du référencement SEO du site de la photographe Nina Carducci",
       imgURL: projImg3,
       link: "https://zaza28.github.io/ninacarducci/",
     },

@@ -33,7 +33,7 @@ export const NavBar = () => {
     <>
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#about">
           <img src={logo} alt="Logo" className="logo-navbar" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -43,13 +43,13 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              href="#home"
+              href="#about"
               className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
+                activeLink === "about" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("home")}
+              onClick={() => onUpdateActiveLink("about")}
             >
-              Home
+              About
             </Nav.Link>
             <Nav.Link
               href="#skills"

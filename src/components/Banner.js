@@ -4,11 +4,11 @@ import HeaderImg from "../assets/img/header-img.svg";
 
 export const Banner = () => {
   return (
-    <section className="banner" id="home">
+    <section className="banner" id="about">
       <Container>
         <Row className="align-item-center">
           <Col xs={12} md={6} xl={7}>
-            <span className="tagline">Welcome to my Portfolio</span>
+            <span className="tagline">Bienvenue Sur Mon Portfolio</span>
             <h1>Bonjour, je suis Zaïneb développeuse Web.</h1>
             <p>
               Bonjour et bienvenue sur mon portfolio ! Passionnée par
